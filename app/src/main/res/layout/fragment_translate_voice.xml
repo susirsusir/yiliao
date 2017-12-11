@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yl.yiliao.fragment.TranslateVoiceFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/from_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/from_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中文"
+                android:layout_centerVertical="true"
+                android:textColor="#ff222222"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/frome_iv"
+                android:layout_width="15dp"
+                android:layout_height="9dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/from_tv"
+                android:src="@drawable/ic_change_down" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/change_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_change"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/to_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/to_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="英语"
+                android:layout_centerVertical="true"
+                android:textColor="#ff222222"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/to_iv"
+                android:layout_width="15dp"
+                android:layout_height="9dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/to_tv"
+                android:src="@drawable/ic_change_down" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="480dp"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout_top"
+        android:background="#fff0f0f0" />
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <EditText
+                android:id="@+id/input_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="46dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:gravity="left|top"
+                android:hint="点击麦克风图标，开始说话"
+                android:textColor="@color/edit_text_color"
+                android:textColorHint="@color/edit_hint_color"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/excute_iv"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_excute_off" />
+
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/excute_iv"
+                android:src="@drawable/clear_bg"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="480dp"
+            android:layout_height="1dp"
+            android:background="#fff0f0f0" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/result_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="40dp"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/more_lay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:id="@+id/play_iv"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_play" />
+
+                            <ImageView
+                                android:id="@+id/copy_iv"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="16dp"
+                                android:layout_toLeftOf="@+id/play_iv"
+                                android:src="@drawable/copy_ng" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/record_lay"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/record_bg"
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/voice_bg"
+                    android:visibility="gone"/>
+
+                <com.yl.yiliao.widget.recorder.AudioRecorderButton
+                    android:id="@+id/record"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/audio_ng"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/record_btn"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/audio_ng" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

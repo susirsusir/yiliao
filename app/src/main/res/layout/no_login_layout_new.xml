@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="294dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_login_empty_new" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="你还没有登录哦"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/log_btn"
+        android:layout_width="312dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/login_btn_select_bg"
+        android:text="登录"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/regis_btn"
+        android:layout_width="312dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/regist_btn_bg"
+        android:text="注册"
+        android:gravity="center"
+        android:textColor="@color/cursor_color"
+        android:textSize="16sp" />
+
+</LinearLayout>

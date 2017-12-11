@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.yl.yiliao.activity.MyQrCodeActivity">
+
+    <RelativeLayout
+        android:layout_width="318dp"
+        android:layout_height="420dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/my_qr_code">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="16dp"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/default_head_icon"
+                app:roundedCornerRadius="26dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/user_icon">
+
+                <TextView
+                    android:id="@+id/nametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/phonetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray2"
+                    android:layout_below="@+id/nametv"
+                    android:layout_marginTop="10dp"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_qr"
+            android:layout_width="282dp"
+            android:layout_height="282dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            app:actualImageScaleType="centerCrop"
+            android:layout_below="@+id/top_layout"
+            app:placeholderImage="@drawable/default_head_icon"
+            app:roundedCornerRadius="26dp" />
+
+        <TextView
+            android:layout_below="@+id/user_qr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/gray2"
+            android:textSize="11sp"
+            android:text="扫一扫上面的二维码图案，加我为好友"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

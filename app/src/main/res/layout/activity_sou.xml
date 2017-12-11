@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yl.yiliao.activity.SouActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <RelativeLayout
+            android:id="@+id/country_code_lay"
+            android:layout_width="122dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:id="@+id/country_code_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/icon"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="中国（+86）"
+                android:textColor="@color/edit_text_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_top_down" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/country_code_lay"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="@color/gray0" />
+
+            <EditText
+                android:id="@+id/phone_ed"
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/line"
+                android:background="@null"
+                android:hint="请输入好友手机号"
+                android:imeOptions="actionSearch"
+                android:inputType="phone|number"
+                android:singleLine="true"
+                android:textColor="@color/edit_text_color"
+                android:textColorHint="@color/edit_hint_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/search_cion"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="13dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_sou" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/search_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="哎呀！！没找到您的好友"
+                android:textColor="@color/gray2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="输入手机号码进行搜索"
+                android:textColor="@color/edit_hint_color"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_lay"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@+id/top_lay"
+        android:visibility="gone">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_head_icon"
+            app:roundedCornerRadius="18dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/user_icon">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/edit_text_color"/>
+
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_below="@+id/user_name"
+                android:textColor="@color/main_tab_select_bg"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/add_btn"
+            android:layout_width="54dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textSize="12sp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="80dp"
+            android:background="@color/gray0" />
+
+    </RelativeLayout>
+</RelativeLayout>

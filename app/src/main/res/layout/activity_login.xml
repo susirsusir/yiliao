@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yl.yiliao.activity.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/top_bg">
+
+        <ImageView
+            android:id="@+id/cencel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:padding="2dp"
+            android:src="@drawable/capture_top_left" />
+
+        <TextView
+            android:id="@+id/titale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/phone_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_lay"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:text="手机"
+        android:textColor="@color/edit_hint_color"
+        android:textSize="13sp"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/country_code_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_hint_tv"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="3dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/country_code_tv"
+            android:layout_width="90dp"
+            android:layout_height="18dp"
+            android:gravity="center_vertical"
+            android:text="中国（+86）"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/edit_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="9dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_top_down"
+            android:layout_toRightOf="@+id/country_code_tv" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/country_code_lay"
+        android:layout_alignRight="@+id/country_code_lay"
+        android:layout_below="@+id/country_code_lay"
+        android:background="@color/gray1"
+        android:layout_marginTop="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/phone_input_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_hint_tv"
+        android:layout_toRightOf="@+id/country_code_lay"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <EditText
+            android:id="@+id/phont_ed"
+            android:layout_width="200dp"
+            android:layout_height="18dp"
+            android:gravity="center_vertical"
+            android:hint="请输入您的手机号码"
+            android:inputType="phone|number"
+            android:singleLine="true"
+            android:textColorHint="@color/edit_hint_color"
+            android:textColor="@color/edit_text_color"
+            android:textSize="14sp"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/phone_input_lay"
+        android:layout_below="@+id/phone_input_lay"
+        android:layout_marginRight="25dp"
+        android:background="@color/gray1"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/phone_error_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/red0"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_alignLeft="@+id/phone_input_lay"
+        android:layout_alignRight="@+id/phone_input_lay"
+        android:layout_below="@+id/phone_input_lay"
+        android:layout_marginTop="15dp"/>
+
+
+    <TextView
+        android:id="@+id/ver_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_error_hint"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        android:text="验证码"
+        android:textColor="@color/edit_hint_color"
+        android:textSize="13sp"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/ver_code_ed"
+        android:layout_width="200dp"
+        android:layout_height="18dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ver_code"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
+        android:hint="请输入短信验证码"
+        android:inputType="phone|number"
+        android:singleLine="true"
+        android:textColorHint="@color/edit_hint_color"
+        android:textColor="@color/edit_text_color"
+        android:textSize="14sp"
+        android:background="@null"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ver_code_ed"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@color/gray1" />
+
+    <TextView
+        android:id="@+id/get_code_hint"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:layout_above="@+id/line"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="28dp"
+        android:textSize="11sp"
+        android:textColor="@color/cursor_color"
+        android:background="@drawable/btn_get_code"
+        android:layout_marginBottom="8dp"
+        android:text="获取验证码"/>
+
+    <TextView
+        android:id="@+id/code_error_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="6dp"
+        android:textSize="10sp"
+        android:textColor="@color/red0"/>
+
+
+    <TextView
+        android:id="@+id/push_btn"
+        android:layout_width="312dp"
+        android:layout_height="42dp"
+        android:text="登录"
+        android:gravity="center"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/login_btn_select_bg"/>
+
+    <TextView
+        android:id="@+id/register_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/gray2"
+        android:layout_below="@+id/push_btn"
+        android:layout_marginTop="35dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:src="@drawable/page_bg"
+        android:layout_above="@+id/hint"/>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray3"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:text="译聊不会向任何人泄露您的手机号"/>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="item_line_bg">#f1f1f1</color>
+    <color name="main_tab_bg">#788289</color>
+    <color name="main_tab_select_bg">#01AABD</color>
+    <color name="tab_common">#ECEAEA</color>
+    <color name="edit_hint_color">#bbbbbb</color>
+    <color name="edit_text_color">#222222</color>
+    <color name="transparent_color">#00ffffff</color>
+    <color name="cursor_color">#01AABD</color>
+    <color name="blue1">#00818f</color>
+    <color name="blue2">#9adde5</color>
+    <color name="blue0">#b3e6eb</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray0">#f0f0f0</color>
+    <color name="gray1">#dedede</color>
+    <color name="gray2">#777777</color>
+    <color name="gray3">#d0d0d0</color>
+    <color name="gray4">#171717</color>
+    <color name="gray5">#f7f7f7</color>
+    <color name="gray6">#aaaaaa</color>
+    <color name="gray7">#d0d2d7</color>
+    <color name="gray8">#ebebeb</color>
+
+
+    <color name="item_inter_line_bg">#ebebeb</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="exit_bg">#7F000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+
+    <color name="black0">#999999</color>
+    <color name="red0">#fa5a5a</color>
+
+
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yl.yiliao.activity.NickNameActivity">
+
+    <EditText
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_margin="25dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="您还没有设置签名呢~~"
+        android:singleLine="true"
+        android:textColor="@color/edit_text_color"
+        android:textColorHint="@color/edit_hint_color"
+        android:textSize="16sp" />
+</RelativeLayout>

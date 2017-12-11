@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yl.yiliao.activity.SignActivity">
+
+    <EditText
+        android:id="@+id/ver_code_ed"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:gravity="center_vertical"
+        android:layout_margin="25dp"
+        android:hint="您还没有设置签名呢~~"
+        android:singleLine="true"
+        android:textColorHint="@color/edit_hint_color"
+        android:textColor="@color/edit_text_color"
+        android:textSize="16sp"
+        android:background="@null"/>
+
+</RelativeLayout>

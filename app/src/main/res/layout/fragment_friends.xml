@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yl.yiliao.fragment.FriendsFragment">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/top_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="好友"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/add_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:padding="6dp"
+            android:src="@drawable/add_friend_select" />
+    </RelativeLayout>
+
+    <com.yl.yiliao.widget.NoLoginEmptyView2
+        android:id="@+id/nologin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/friendLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:visibility="gone">
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#00000000"
+            android:descendantFocusability="afterDescendants"
+            android:dividerHeight="0dip" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="@dimen/height_eighty"
+            android:layout_height="@dimen/height_eighty"
+            android:layout_centerInParent="true"
+            android:background="@color/cursor_color"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:visibility="invisible" />
+
+        <com.yl.yiliao.widget.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="30dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/message_null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="你还没有好友哦~"
+                android:textColor="@color/gray2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="点击右上角 “+” 号按钮添加好友吧"
+                android:textColor="@color/edit_hint_color"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
